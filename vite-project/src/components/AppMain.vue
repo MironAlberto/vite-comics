@@ -13,9 +13,21 @@ export default {
 
 <template>
     <main>
-        MAIN
+        <div class="content">
+            -- Content goes here --
+        </div>
     </main>
 </template>
 
 <style lang="scss" scoped>
+main{
+    width: 100%;
+    background-color: black;
+    color: white;
+    
+    .content{
+        font-size: 40px;
+        padding: 50px 200px;
+    }
+}
 </style>
