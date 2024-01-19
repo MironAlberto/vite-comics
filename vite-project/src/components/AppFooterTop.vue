@@ -36,16 +36,18 @@ export default {
 
 <template>
     <footer class="footer-top">
-        <ul>
-            <li v-for="(elem, index) in footerLinks" :key="index">
-                <div class="image">
-                    <img :src="footerImage(elem.image)" alt="">
-                </div>
-                <div class="text">
-                    {{ elem.text }}
-                </div>
-            </li>
-        </ul>
+        <div class="container">
+            <ul>
+                <li v-for="(elem, index) in footerLinks" :key="index">
+                    <div class="image">
+                        <img :src="footerImage(elem.image)" alt="">
+                    </div>
+                    <div class="text">
+                        {{ elem.text }}
+                    </div>
+                </li>
+            </ul>
+        </div>
     </footer>
 </template>
 
@@ -54,35 +56,41 @@ export default {
     width: 100%;
     background-color: #0282F9;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    ul{
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        ul{
         list-style-type: none;
         display: flex;
         
-    }
+        }
 
-    li{
-        display: flex;
-        padding: 50px 50px 40px 0px;
+        li{
+            display: flex;
+            padding: 22px;
 
-        .image{
-            width: 55px;
+            .image{
+                width: 55px;
 
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
             }
-        }
-        
-        .text{
-            line-height: 85px;
-            padding-left: 12px;
-            align-items: center;
-        }
+            
+            .text{
+                line-height: 85px;
+                padding-left: 4px;
+                align-items: center;
+            }
+       }
     }
+    
 }
 </style>

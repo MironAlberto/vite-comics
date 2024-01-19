@@ -55,17 +55,19 @@ export default {
 
 <template>
     <header>
-        <div>
-            <img src="/img/dc-logo.png" alt="dc-logo">
-        </div>
-        <div>
-            <ul>
-                <li v-for="(elem, i) in navBar">
-                    <span class="nav-size" :class="activeClass(i)" @click="switchActive(i)">
-                        {{ elem.nav }}
-                    </span>
-                </li>
-            </ul>
+        <div class="container">
+            <div>
+                <img src="/img/dc-logo.png" alt="dc-logo">
+            </div>
+            <div>
+                <ul>
+                    <li v-for="(elem, i) in navBar" :key="i">
+                        <span class="nav-size" :class="activeClass(i)" @click="switchActive(i)">
+                            {{ elem.nav }}
+                        </span>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
 </template>
@@ -74,32 +76,39 @@ export default {
 header{
     width: 100%;
     background-color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     
-    ul{
-        list-style-type: none;
+    
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-        li{
-            color: white;
-            display: inline-block;
-            
-            .nav-size{
-                margin-left: 30px;
-                font-size: small; 
-                font-weight: bold;
-                cursor: pointer;
-                color: black;
-            }
+        ul{
+            list-style-type: none;
 
-            .active{
-                border-bottom: 4px solid #0282F9;
-                padding-bottom: 50px;
-                color: #0282F9;
+            li{
+                color: white;
+                display: inline-block;
+                
+                .nav-size{
+                    margin-left: 30px;
+                    font-size: small; 
+                    font-weight: bold;
+                    cursor: pointer;
+                    color: black;
+                }
+
+                .active{
+                    border-bottom: 4px solid #0282F9;
+                    padding-bottom: 50px;
+                    color: #0282F9;
+                }
             }
         }
     }
+    
 
     img{
         width: 80px;
