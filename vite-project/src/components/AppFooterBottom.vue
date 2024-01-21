@@ -177,7 +177,6 @@ export default {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
 
     .links{
         display: flex;
@@ -207,7 +206,6 @@ export default {
         background-position: center;
         
     }
-
 }
 
 .footer-links{

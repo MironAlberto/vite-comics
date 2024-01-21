@@ -76,8 +76,7 @@ export default {
 header{
     width: 100%;
     background-color: white;
-    
-    
+
     .container{
         max-width: 1200px;
         margin: 0 auto;
@@ -108,7 +107,6 @@ header{
             }
         }
     }
-    
 
     img{
         width: 80px;
